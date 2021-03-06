@@ -1,0 +1,11 @@
+ton-scheduler:
+  poolSize: 3
+  threadNamePrefix: TON-SCHEDULER-
+  tasks:
+    - key: SumTask
+      cron: "*/5 * * * * ?"
+      request:
+          x: 1
+          y: 2
+      dependencies:
+        - CustomTask
